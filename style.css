@@ -1,314 +1,302 @@
+/* Importação de fontes do Google Fonts (opcional, mas recomendado para um visual moderno) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Variáveis CSS para facilitar a manutenção de cores e fontes */
 :root {
-  --marrom-claro: #ffffff;
-  --marrom-medio: #825831;
-  --marrom-escuro: #8b5e3c;
-  --texto: #000000;
-  --pastel-rosa: #ba9870;
-  --pastel-rosa-hover: #b9ab8e;
+    --cor-primaria: #4CAF50; /* Verde vibrante */
+    --cor-secundaria: #FFC107; /* Amarelo ouro */
+    --cor-texto: #333;
+    --cor-fundo-claro: #f8f8f8;
+    --cor-fundo-escuro: #2e7d32; /* Verde mais escuro */
+    --fonte-titulo: 'Montserrat', sans-serif;
+    --fonte-corpo: 'Open Sans', sans-serif;
 }
 
+/* Estilos Globais */
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: var(--marrom-claro);
-  color: var(--texto);
-  scroll-behavior: smooth;
+    font-family: var(--fonte-corpo);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-texto);
+    scroll-behavior: smooth; /* Rolagem suave para os links internos */
 }
 
-
+/* Estilos do Cabeçalho (Header) */
 .topo {
-  background-color: var(--marrom-medio);
-  padding: 20px 20px 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column; /* Para empilhar logo/titulo e navegação em telas pequenas */
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky; /* Fixa o cabeçalho no topo ao rolar */
+    top: 0;
+    z-index: 1000;
 }
 
 .logo-titulo {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaço entre a imagem e o título */
+    padding: 0 20px;
+    flex-wrap: wrap; /* Permite quebrar linha em telas muito pequenas */
+    justify-content: center; /* Centraliza em telas pequenas */
 }
 
-.logo-img {
-  width: clamp(80px, 8vw, 100px);
-  height: clamp(80px, 8vw, 100px);
-  border-radius: 15px;
-  background-color: white;
-  object-fit: cover;
+.logo-titulo img {
+    max-width: 80px; /* Tamanho do logo */
+    height: auto;
+    border-radius: 50%; /* Deixa o logo redondo, se for o caso */
+    border: 2px solid var(--cor-secundaria);
 }
 
-.topo h1 {
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  color: white;
-  margin: 0 auto;
-  text-align: center;
+.logo-titulo h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.8em;
+    margin: 0;
+    text-align: center;
 }
 
 .botoes-navegacao {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 35px;
-  margin-top: 15px;
+    margin-top: 15px;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar linha para os links */
+    justify-content: center; /* Centraliza os links */
+    gap: 15px; /* Espaço entre os links */
 }
 
 .botoes-navegacao a {
-  text-decoration: none;
-  background-color: var(--pastel-rosa);
-  color: var(--texto);
-  padding: 10px 18px;
-  border-radius: 30px;
-  font-weight: 500;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-  transition: background-color 0.3s, transform 0.2s;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+    white-space: nowrap; /* Evita quebra de linha nos links individuais */
 }
 
-.botoes-navegacao a:hover {
-  background-color: var(--pastel-rosa-hover);
-  transform: scale(1.05);
+.botoes-navegacao a:hover,
+.botoes-navegacao a:focus {
+    background-color: var(--cor-fundo-escuro);
 }
 
+/* Estilos das Seções Principais */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
 
 .secao {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  line-height: 1.7;
-  font-size: 20px;
-  text-align: justify;
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    outline: none; /* Remove outline padrão do tabindex, use um estilo personalizado se necessário */
 }
 
-h2 {
-  font-family: 'Open Sans', sans-serif;
-  padding-left: 40px;
-  font-size: 26px;
-  font-weight: 700;
-  color: #362408;
+.secao h2 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-primaria);
+    font-size: 2em;
+    margin-top: 0;
+    border-bottom: 2px solid var(--cor-secundaria);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .secao p {
-  margin-bottom: 1.5rem;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    line-height: 1.7;
 }
 
 .secao ul {
-  padding-left: 40px;
-  margin-top: 1rem;
-  line-height: 1.6;
+    list-style: disc;
+    margin-left: 25px;
+    margin-bottom: 15px;
 }
 
-.secao li {
-  margin-bottom: 0.5rem;
+.secao ul li {
+    margin-bottom: 8px;
 }
 
-
+/* Estilos da Galeria de Fotos */
 .galeria {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: flex-start;
-  padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Colunas responsivas */
+    gap: 20px;
+    margin-top: 20px;
 }
 
 .galeria img {
-  width: 182px;
-  height: auto;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  object-fit: cover;
+    width: 100%;
+    height: 200px; /* Altura fixa para as imagens */
+    object-fit: cover; /* Recorta a imagem para cobrir a área */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
 }
 
-/* ===============
-   FORMULÁRIO DE CONTATO
-   =============== */
-
-#contato {
-  text-align: center;
-  padding: 20px;
+.galeria img:hover {
+    transform: scale(1.03); /* Efeito de zoom ao passar o mouse */
 }
 
-.titulo-contato {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--texto);
-  margin-bottom: 20px;
-}
-
-.form-contato {
-  background-color: #bb9a78a3;
-  padding: 15px 20px;
-  border-radius: 12px;
-  max-width: 400px;
-  margin: 40px auto;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  border: 1px solid #d9a9c0;
-}
-
+/* Estilos do Formulário de Contato */
 .form-contato label {
-  font-weight: bold;
-  font-size: 1.1em;
-  color: var(--texto);
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--cor-primaria);
 }
 
-.form-contato input,
+.form-contato input[type="text"],
+.form-contato input[type="email"],
 .form-contato textarea {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 10px;
-  margin-top: 4px;
-  margin-bottom: 12px;
-  border: 1px solid var(--marrom-medio);
-  border-radius: 10px;
-  font-size: 1rem;
-  font-family: inherit;
+    width: calc(100% - 20px); /* Ajusta a largura para padding */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.form-contato textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
 }
 
 .botao-enviar {
-  background-color: var(--pastel-rosa);
-  color: var(--texto);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s, transform 0.2s;
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
 }
 
-.botao-enviar:hover {
-  background-color: var(--pastel-rosa-hover);
-  transform: scale(1.05);
+.botao-enviar:hover,
+.botao-enviar:focus {
+    background-color: var(--cor-fundo-escuro);
 }
 
-.mensagem-enviada {
-  display: none;
-  text-align: center;
-  background-color: var(--pastel-rosa);
-  color: var(--texto);
-  padding: 12px;
-  margin-top: 20px;
-  border-radius: 8px;
-  font-weight: bold;
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-#envio:checked ~ .mensagem-enviada {
-  display: block;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-
-.rodape {
-  background-color: var(--marrom-medio);
-  color: white;
-  text-align: center;
-  padding: 30px 20px;
-  margin-top: 60px;
-  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.conteudo-rodape {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.redes-sociais a {
-  margin: 0 10px;
-  font-size: 1.5rem;
-  color: white;
-  text-decoration: none;
-  transition: transform 0.3s ease;
-}
-
-.redes-sociais a:hover {
-  transform: scale(1.2);
-  color: var(--pastel-rosa);
-}
-
-
+/* Botão Voltar ao Topo */
 .voltar-topo {
-  background-color: var(--pastel-rosa);
-  color: var(--texto);
-  padding: 10px 18px;
-  border-radius: 30px;
-  font-weight: 500;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-  transition: background-color 0.3s, transform 0.2s;
-  border: none;
-  cursor: pointer;
-  display: block;
-  margin: 60px auto;
-  font-size: 1rem;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto); /* Mudei a cor do texto para melhor contraste */
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 999;
 }
 
 .voltar-topo:hover {
-  background-color: var(--pastel-rosa-hover);
-  transform: scale(1.05);
+    background-color: #ffb300; /* Amarelo um pouco mais escuro */
+    transform: translateY(-3px);
 }
 
+/* Estilos do Rodapé (Footer) */
+.rodape {
+    background-color: var(--cor-texto); /* Cor de fundo escura */
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+    margin-top: 30px;
+}
 
-@media (max-width: 600px) {
-  .logo-titulo {
-    flex-direction: column;
-    align-items: center;
-  }
+.conteudo-rodape p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
 
-  .topo h1 {
-    font-size: 1.6rem;
-  }
-
-  .galeria {
+.redes-sociais {
+    margin-top: 15px;
+    display: flex;
     justify-content: center;
-  }
-
-  .galeria img {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .botoes-navegacao {
     gap: 15px;
-  }
-
-  h2 {
-    padding-left: 10px;
-  }
-
-  .form-contato {
-    width: 90%;
-  }
 }
 
-body img:not(.galeria img) {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 20px;
+.redes-sociais a {
+    color: white;
+    font-size: 1.5em; /* Aumenta o tamanho dos ícones */
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-img:last-child {
-  margin-bottom: 0;
+.redes-sociais a:hover {
+    color: var(--cor-secundaria);
 }
 
-.container-de-imagem {
-  text-align: center;
+/* Responsividade (Media Queries) */
+@media (max-width: 768px) {
+    .logo-titulo h1 {
+        font-size: 1.5em; /* Reduz o título em telas menores */
+    }
+
+    .botoes-navegacao {
+        flex-direction: column; /* Empilha os botões de navegação */
+        align-items: center;
+    }
+
+    .botoes-navegacao a {
+        width: 80%; /* Ocupa mais largura */
+        text-align: center;
+    }
+
+    .secao {
+        padding: 20px;
+    }
+
+    .secao h2 {
+        font-size: 1.8em;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+    }
+
+    .voltar-topo {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.5em;
+    }
 }
 
-.container-de-imagem img {
-  margin: 0 auto;
-}
+@media (max-width: 480px) {
+    .logo-titulo img {
+        max-width: 60px;
+    }
 
-.imagem-pequena {
-  max-width: 300px;
-}
+    .logo-titulo h1 {
+        font-size: 1.2em;
+    }
 
-.imagem-50-porcento {
-  width: 50%;
-  height: auto;
+    .topo {
+        padding: 0.8rem 0;
+    }
+
+    main {
+        margin: 15px auto;
+        padding: 0 15px;
+    }
 }
