@@ -13,7 +13,7 @@ Neste local pode encontrar:
 - Café artesanal e frango caipira  
 - Pães, doces caseiros e pastéis  
 - Artesanatos feitos com muito carinho
-Além de produtos de qualidade, quem participa está apoiando a **agricultura familiar**, fortalecendo a economia local e os laços da comunidade.
+Além de produtos de qualidade, quem participa está apoiando a agricultura familiar, fortalecendo a economia local e os laços da comunidade.
 
 #Neste projeto foi utlizadas  a linguagem de marcação HTML e a estilização CSS (usando variáveis e media queries). 
 As Imagens autorais, as fotos tiradas com o meu  celular e com permissão dos produtores envolvidos.
