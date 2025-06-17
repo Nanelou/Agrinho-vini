@@ -4,13 +4,15 @@
 
 /* Variáveis CSS para facilitar a manutenção de cores e fontes */
 :root {
-    --cor-primaria: #4CAF50; /* Verde vibrante */
-    --cor-secundaria: #FFC107; /* Amarelo ouro */
-    --cor-texto: #333;
-    --cor-fundo-claro: #f8f8f8;
-    --cor-fundo-escuro: #2e7d32; /* Verde mais escuro */
+    --cor-primaria: #8B5E3C;       /* Marrom principal */
+    --cor-secundaria: #D2B48C;     /* Bege claro */
+    --cor-texto: #3B2B23;          /* Marrom escuro para textos */
+    --cor-fundo-claro: #F5F0EB;    /* Fundo geral suave */
+    --cor-fundo-escuro: #5C3D2E;   /* Marrom escuro para hover e botões */
     --fonte-titulo: 'Montserrat', sans-serif;
     --fonte-corpo: 'Open Sans', sans-serif;
+}
+
 }
 
 /* Estilos Globais */
