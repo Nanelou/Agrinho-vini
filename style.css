@@ -1,5 +1,5 @@
 
-/* Importação de fontes do Google Fonts (opcional, mas recomendado para um visual moderno) */
+/* Importação de fontes do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
 
 /* Variáveis CSS para facilitar a manutenção de cores e fontes */
@@ -50,7 +50,7 @@ body {
 .logo-titulo img {
     max-width: 80px; /* Tamanho do logo */
     height: auto;
-    border-radius: 50%; /* Deixa o logo redondo, se for o caso */
+    border-radius: 0; /* Deixa o logo redondo, se for o caso */
     border: 2px solid var(--cor-secundaria);
 }
 
