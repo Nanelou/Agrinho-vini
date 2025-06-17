@@ -48,7 +48,7 @@ body {
 }
 
 .logo-titulo img {
-    max-width: 200px; /* Tamanho do logo */
+    max-width: 600px; /* Tamanho do logo */
     height: auto;
     border-radius: 0; /* Deixa o logo redondo, se for o caso */
     border: 2px solid var(--cor-secundaria);
