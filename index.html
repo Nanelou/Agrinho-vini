@@ -6,10 +6,11 @@
   <title>Feirinha do Produtor - Projeto Agrinho 2025</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <header class="topo" role="banner">
     <div class="logo-titulo">
-      <img src="IMG/logo.png" alt="Logotipo da Feira do Produtor" class="logo" />
+      <img src="img/OIP.jpg" alt="Logotipo da Feira do Produtor" class="logo">
       <h1>Feira do Produtor em Curiúva Paraná: Campo e Cidade de Mãos Dadas</h1>
     </div>
     <nav class="botoes-navegacao" role="navigation" aria-label="Menu principal">
@@ -25,12 +26,13 @@
   <main>
     <section id="introducao" class="secao" tabindex="0">
       <h2>Conheça a Feira do Produtor de Curiúva</h2>
-      <p>...</p>
+      <p>A Feira do Produtor de Curiúva é um espaço especial onde a cidade e o campo se encontram. Mais do que um local de compras, ela valoriza o trabalho dos pequenos produtores, incentiva a economia local e fortalece os laços entre quem planta e quem consome. Em cada momento, a feira cresce em participação e se torna um orgulho para a comunidade. Tudo acontece graças ao esforço dos pequenos agricultores, artesãos e produtores locais, que com dedicação levam à comunidade produtos frescos e artesanais de qualidade.</p>
+      <p>Além disso, a feira conta com o apoio de iniciativas públicas que colaboram para oferecer estrutura e organização ao evento, fortalecendo ainda mais esse espaço que valoriza o trabalho de quem planta, produz e vende com orgulho o que é da nossa terra.</p>
     </section>
 
     <section id="produtos" class="secao" tabindex="0">
       <h2>Produtos Vendidos</h2>
-      <p>...</p>
+      <p>Os Produtos vendidos na feira são um verdadeiro convite ao sabor e à tradição local. Lá, você encontra uma grande variedade de produtos frescos e artesanais, preparados com dedicação pelos produtores da região.</p>
       <ul>
         <li>Frutas</li>
         <li>Verduras</li>
@@ -41,22 +43,25 @@
         <li>Doces caseiros</li>
         <li>Pães, bolos e artesanatos</li>
       </ul>
+      <p>Mas esses são apenas alguns exemplos. A feira oferece muito mais! A cada edição, os visitantes podem se surpreender com novas opções, sabores diferentes e produtos variados, refletindo a criatividade e o esforço dos produtores locais.</p>
     </section>
 
     <section id="beneficios" class="secao" tabindex="0">
       <h2>Benefícios da Feira</h2>
-      <p>...</p>
+      <p>A Feira do Produtor de Curiúva traz muitos benefícios para o município. Ela fortalece a agricultura familiar, gera renda para pequenos produtores e valoriza o trabalho de quem se dedica à produção local, seja no campo ou na cidade. Além disso, incentiva o cultivo e a criação de produtos feitos com carinho e qualidade, ajudando a movimentar a economia e a manter vivas as tradições da nossa comunidade.</p>
+      <p>Outro ponto importante é o impacto na qualidade de vida. A feira promove o consumo de alimentos mais frescos e saudáveis, direto das mãos de quem produz. Também é um espaço de convivência e troca entre os moradores, aproximando quem faz de quem consome, criando laços de confiança e fortalecendo o bem-estar de todos.</p>
     </section>
 
     <section id="local" class="secao" tabindex="0">
       <h2>Dias, Horários e Local</h2>
       <img src="IMG/cva.png" alt="Praça de Curiúva onde acontece a feira do produtor" />
-      <p>...</p>
+      <p>Acontece toda sexta-feira, a partir das 17h30, na Praça Constante Borges — também conhecida como Praça Central, bem no coração da cidade. O local é de fácil acesso e muito conhecido pelos moradores, o que facilita a participação de todos.</p>
+      <p>Por ser uma praça ampla e bem localizada, oferece um ambiente acolhedor para os feirantes exporem seus produtos e para a população circular com tranquilidade. Com o cair da tarde, o espaço vai se enchendo de cores, aromas e sabores, criando um clima agradável e convidativo para aproveitar tudo que a feira tem a oferecer.</p>
     </section>
 
     <section id="galeria" class="secao" tabindex="0">
       <h2>Galeria de Fotos</h2>
-      <p>...</p>
+      <p>Nada melhor do que ver de perto a variedade e a qualidade dos produtos oferecidos na Feira do Produtor de Curiúva. As fotos abaixo destacam os alimentos frescos e artesanais que são preparados com muito cuidado pelos feirantes. Registrar esses produtos é uma forma de valorizar o esforço de quem cultiva, colhe e produz.</p>
       <div class="galeria">
         <img src="IMG/58ca13e9-7d01-4bba-b09b-6bff07aa980c.jpg" alt="Vista da feira com barracas de produtos frescos" />
         <img src="IMG/177b3d87-c105-48f9-8950-3f107ac2ebc8.jpg" alt="Detalhe de frutas e vegetais orgânicos" />
@@ -68,11 +73,11 @@
       <h2>Fale Conosco</h2>
       <form class="form-contato" action="#" method="post" novalidate>
         <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required />
+        <input type="text" id="nome" name="nome" required aria-required="true" />
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
+        <input type="email" id="email" name="email" required aria-required="true" />
         <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem" rows="3" required></textarea>
+        <textarea id="mensagem" name="mensagem" rows="3" required aria-required="true"></textarea>
         <button type="submit" class="botao-enviar">Enviar</button>
       </form>
     </section>
@@ -82,12 +87,12 @@
 
   <footer class="rodape" role="contentinfo">
     <div class="conteudo-rodape">
-      <p>&copy; 2025 Feirinha do Produtor. Imagens tiradas com celular, com autorização dos envolvidos. Todos os direitos reservados.</p>
-      <p>Projeto Agrinho 2025 | Desenvolvido por Vinicius Tosta</p>
+      <p>&copy; 2025 Feirinha do Produtor. As imagens foram tiradas pelo meu celular, com autorização dos envolvidos. Todos os direitos reservados.</p>
+      <p>Projeto Agrinho 2025 - Festejando a Conexão Campo e Cidade | Desenvolvido por Vinicius Tosta</p>
       <div class="redes-sociais" role="navigation" aria-label="Redes sociais">
-        <a href="#" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
-        <a href="#" target="_blank" rel="noopener" aria-label="Facebook">📘</a>
-        <a href="#" target="_blank" rel="noopener" aria-label="WhatsApp">📱</a>
+        <a href="#" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">📷</a>
+        <a href="#" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook">📘</a>
+        <a href="#" target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp">📱</a>
       </div>
     </div>
   </footer>
