@@ -23,7 +23,7 @@ body {
 
 header .topo {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 15px 30px;
   flex-wrap: wrap;
@@ -33,21 +33,23 @@ header .topo {
 
 .logo-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  width: 100%;
-  max-width: 400px;
-  padding: 0 10px;
-  flex-wrap: wrap;
+  padding: 0 20px;
+ 
+  
 }
 
 .logo-container h1 {
-  font-size: 2em;
+  font-size: clamp (2.0rem, 4 vw, 3rem);
   margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align:justify;
 }
 
 .logo-direita {
-  max-width: 180px;
+  max-width: 200px;
   height: auto;
   border-radius: 12px;
   border: 3px solid var(--cor-secundaria);
@@ -109,7 +111,7 @@ main {
   color: var(--cor-texto);
 }
 
-/* --- SEÇÃO DA GALERIA CORRIGIDA --- */
+/* --- SEÇÃO DA GALERIA */
 .galeria {
   display: flex;
   gap: 15px; /* Espaçamento entre as imagens */
