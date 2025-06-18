@@ -109,19 +109,25 @@ main {
   color: var(--cor-texto);
 }
 
+/* --- SEÇÃO DA GALERIA CORRIGIDA --- */
 .galeria {
   display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: center;
+  gap: 15px; /* Espaçamento entre as imagens */
+  flex-wrap: wrap; /* Permite que as imagens quebrem para a próxima linha */
+  justify-content: center; /* Centraliza as imagens na linha */
 }
 
 .galeria img {
-  max-width: 100%;
-  height: auto;
+  /* Define uma largura máxima para as imagens, permitindo que várias caibam na linha */
+  max-width: 220px; /* Você pode ajustar este valor conforme o tamanho desejado */
+  width: 100%; /* Garante que a imagem ocupe a largura disponível dentro do max-width */
+  height: auto; /* Mantém a proporção da imagem */
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  object-fit: cover; /* Ajuda a garantir que as imagens não fiquem distorcidas */
 }
+/* --- FIM DA SEÇÃO DA GALERIA CORRIGIDA --- */
+
 
 .form-contato {
   display: flex;
@@ -209,8 +215,7 @@ main {
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-/* Responsividade */
-
+/* --- RESPONSIVIDADE CORRIGIDA --- */
 @media (max-width: 768px) {
   header .topo {
     flex-direction: column;
@@ -228,9 +233,13 @@ main {
     justify-content: space-around;
   }
   
+  /* Ajuste para a galeria: mantém o alinhamento lado a lado, mas reduz o tamanho */
   .galeria {
-    flex-direction: column;
-    gap: 10px;
+    gap: 10px; /* Reduz um pouco o espaçamento em telas menores */
+  }
+
+  .galeria img {
+    max-width: 150px; /* Reduz a largura das imagens para telas de tablet */
   }
 }
 
@@ -243,4 +252,10 @@ main {
   .logo-container h1 {
     font-size: 1.5em;
   }
+
+  /* Ajuste para a galeria: mantém o alinhamento lado a lado, mas reduz mais o tamanho */
+  .galeria img {
+    max-width: 100px; /* Reduz a largura das imagens para telas de celular */
+  }
 }
+/* --- FIM DA RESPONSIVIDADE CORRIGIDA --- */
