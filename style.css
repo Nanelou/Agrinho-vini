@@ -1,348 +1,246 @@
-/* Importação de fontes do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
-
-/* Variáveis CSS para facilitar a manutenção de cores e fontes */
 :root {
-    --cor-primaria: #8B5E3C;       /* Marrom principal */
-    --cor-secundaria: #D2B48C;     /* Bege claro */
-    --cor-texto: #3B2B23;          /* Marrom escuro para textos */
-    --cor-fundo-claro: #F5F0EB;    /* Fundo geral suave */
-    --cor-fundo-escuro: #5C3D2E;   /* Marrom escuro para hover e botões */
-    --fonte-titulo: 'Montserrat', sans-serif;
-    --fonte-corpo: 'Open Sans', sans-serif;
+  --cor-primaria: hsl(21, 39%, 49%);
+  --cor-secundaria: #f9f9f9;
+  --cor-texto: #333;
+  --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Estilos Globais */
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 body {
-    font-family: var(--fonte-corpo);
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: var(--cor-fundo-claro);
-    color: var(--cor-texto);
-    scroll-behavior: smooth;
+  font-family: var(--fonte-principal);
+  margin: 0;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+  line-height: 1.6;
 }
 
-/* Estilos do Cabeçalho (Header) */
-.topo {
-    background-color: var(--cor-primaria);
-    color: white;
-    padding: 1rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+header .topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  flex-wrap: wrap;
+  background-color: var(--cor-primaria);
+  color: white;
 }
 
-/* Logo e título alinhados: título à esquerda, imagem à direita */
-.logo-titulo {
-    display: flex;
-    justify-content: space-between; /* Título esquerda, imagem direita */
-    align-items: center;
-    padding: 0 20px;
-    width: 100%;
-    max-width: 1200px;
-    flex-wrap: wrap;
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 0 10px;
+  flex-wrap: wrap;
 }
 
-.logo-titulo h1 {
-    font-family: var(--fonte-titulo);
-    font-size: 1.8em;
-    margin: 0;
-    text-align: left;
-    flex: 1; /* Ocupa o espaço disponível */
+.logo-container h1 {
+  font-size: 2em;
+  margin: 0;
 }
 
-.logo-titulo img {
-    max-width: 100px;
-    height: auto;
-    border-radius: 0;
-    border: 2px solid var(--cor-secundaria);
-    margin-left: 20px;
+.logo-direita {
+  max-width: 180px;
+  height: auto;
+  border-radius: 12px;
+  border: 3px solid var(--cor-secundaria);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
-/* Navegação */
+.logo-direita:hover {
+  transform: scale(1.05);
+}
+
 .botoes-navegacao {
-    margin-top: 15px;
-    padding: 0 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .botoes-navegacao a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    font-weight: 600;
-    white-space: nowrap;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
 }
 
 .botoes-navegacao a:hover,
 .botoes-navegacao a:focus {
-    background-color: var(--cor-fundo-escuro);
+  background-color: #388e3c; /* Tom mais escuro do verde */
+  outline: none;
 }
 
-/* Seções principais */
 main {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 20px;
+  padding: 20px 30px;
+  max-width: 900px;
+  margin: auto;
+  background-color: var(--cor-secundaria);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .secao {
-    background-color: white;
-    padding: 30px;
-    margin-bottom: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    outline: none;
+  margin-bottom: 40px;
 }
 
 .secao h2 {
-    font-family: var(--fonte-titulo);
-    color: var(--cor-primaria);
-    font-size: 2em;
-    margin-top: 0;
-    border-bottom: 2px solid var(--cor-secundaria);
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+  color: var(--cor-primaria);
+  margin-bottom: 15px;
 }
 
 .secao p {
-    margin-bottom: 15px;
-    font-size: 1.1em;
-    line-height: 1.7;
-    text-align: justify;
+  text-align: justify;
+  margin-bottom: 15px;
 }
 
 .secao ul {
-    list-style: disc;
-    margin-left: 25px;
-    margin-bottom: 15px;
+  list-style-type: disc;
+  margin-left: 20px;
+  color: var(--cor-texto);
 }
 
-.secao ul li {
-    margin-bottom: 8px;
-}
-
-/* Galeria de fotos */
 .galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .galeria img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-.galeria img:hover {
-    transform: scale(1.03);
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 500px;
 }
 
-/* Formulário de contato */
 .form-contato label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: var(--cor-primaria);
+  font-weight: 600;
 }
 
-.form-contato input[type="text"],
-.form-contato input[type="email"],
+.form-contato input,
 .form-contato textarea {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1em;
-}
-
-.form-contato textarea {
-    resize: vertical;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: var(--fonte-principal);
+  font-size: 1em;
+  resize: vertical;
 }
 
 .botao-enviar {
-    background-color: var(--cor-primaria);
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1em;
-    font-weight: 700;
-    transition: background-color 0.3s ease;
+  background-color: var(--cor-primaria);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .botao-enviar:hover,
 .botao-enviar:focus {
-    background-color: var(--cor-fundo-escuro);
+  background-color: #388e3c;
+  outline: none;
 }
 
-/* Botão voltar ao topo */
 .voltar-topo {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: var(--cor-secundaria);
-    color: var(--cor-texto);
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 1.8em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    z-index: 999;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: var(--cor-primaria);
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
 }
 
-.voltar-topo:hover {
-    background-color: #ffb300;
-    transform: translateY(-3px);
+.voltar-topo:hover,
+.voltar-topo:focus {
+  background-color: #388e3c;
+  outline: none;
 }
 
-/* Rodapé */
 .rodape {
-    background-color: var(--cor-texto);
-    color: white;
-    padding: 25px 20px;
-    text-align: center;
-    margin-top: 30px;
-}
-
-.conteudo-rodape p {
-    margin: 5px 0;
-    font-size: 0.9em;
+  background-color: var(--cor-primaria);
+  color: white;
+  padding: 20px 30px;
+  font-size: 0.9em;
 }
 
 .rodape-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* permite quebra de linha em telas pequenas */
-    gap: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
 }
 
-.texto-cidade {
-    flex: 1;
-    min-width: 250px;
+.texto-cidade p {
+  margin: 4px 0;
 }
 
 .bandeira-cidade {
-    max-width: 120px;
-    height: auto;
-    border-radius: 6px;
-    border: 2px solid var(--cor-secundaria);
-}
-
-
-.redes-sociais {
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.redes-sociais a {
-    color: white;
-    font-size: 1.5em;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.redes-sociais a:hover {
-    color: var(--cor-secundaria);
+  max-width: 120px;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid var(--cor-secundaria);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 /* Responsividade */
+
 @media (max-width: 768px) {
-    .logo-titulo {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .logo-titulo h1 {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-    }
-
-    .logo-titulo img {
-        margin-left: 0;
-        max-width: 80px;
-    }
-
-    .botoes-navegacao {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .botoes-navegacao a {
-        width: 80%;
-        text-align: center;
-    }
-
-    .secao {
-        padding: 20px;
-    }
-
-    .secao h2 {
-        font-size: 1.8em;
-    }
-
-    .galeria {
-        grid-template-columns: 1fr;
-    }
-
-    .voltar-topo {
-        bottom: 20px;
-        right: 20px;
-        width: 45px;
-        height: 45px;
-        font-size: 1.5em;
-    }
+  header .topo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .logo-container {
+    max-width: 100%;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+  
+  .botoes-navegacao {
+    width: 100%;
+    justify-content: space-around;
+  }
+  
+  .galeria {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 @media (max-width: 480px) {
-    .logo-titulo img {
-        max-width: 60px;
-    }
-
-    .logo-titulo h1 {
-        font-size: 1.2em;
-    }
-
-    .topo {
-        padding: 0.8rem 0;
-    }
-
-    main {
-        margin: 15px auto;
-        padding: 0 15px;
-    }
-
-    .rodape-flex {
+  .botoes-navegacao {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
+    gap: 8px;
+  }
+  
+  .logo-container h1 {
+    font-size: 1.5em;
+  }
 }
