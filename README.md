@@ -18,12 +18,12 @@ Além de produtos de qualidade, quem participa está apoiando a agricultura fami
 #Neste projeto foi utlizadas  a linguagem de marcação HTML e a estilização CSS (usando variáveis e media queries). 
 As Imagens autorais, as fotos tiradas com o meu  celular e com permissão dos produtores envolvidos.
 O site está dividido nas seguintes seções:
-Início – Apresentação da feira  
-Sobre a Feira – Informações principais  
-Produtos – O que você encontra lá  
-Galeria de Fotos – Imagens dos produtos e da feira  
-Agradecimentos– Créditos aos produtores e comunidade
-Este repositório está marcado com a tag: "agrinho2025"
+Início – Apresentação da feira. 
+Sobre a Feira – Informações principais.  
+Produtos – O que você encontra lá  .
+Galeria de Fotos – Imagens dos produtos e da feira.
+Também esta presente no projeto através do Google Maps a localização onde ocorre a Feira do Produtor.
+Este repositório está marcado com a tag: "agrinho2025".
 E, foi Desenvolvido por mim, Vinicius Tosta, Aluno da 3ªSérie  do Itinerário de Matemática e Ciências da Natureza – Ensino Médio  do Colégio Estadual Professor Gabriel Rosa.
 > Este site foi criado com muito carinho para mostrar como a cidade e o campo podem caminhar juntos.  
 > Projeto apresentado no concurso **Agrinho 2025 – Festejando a Conexão Campo-Cidade**.
